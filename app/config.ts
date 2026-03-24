@@ -6,7 +6,7 @@ type Author = {
 
 export const authors: Record<string, Author> = {
   default: {
-    name: 'Your Name',
+    name: 'Your Name Sir',
     bio: 'A short bio describing yourself.',
     avatar: '/default-avatar.svg',
   },
