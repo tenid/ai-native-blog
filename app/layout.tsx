@@ -7,19 +7,20 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
+import { siteConfig } from './config'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: siteConfig.siteName,
+    template: `%s | ${siteConfig.siteName}`,
   },
-  description: 'This is my portfolio.',
+  description: siteConfig.siteDescription,
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: siteConfig.siteName,
+    description: siteConfig.siteDescription,
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: siteConfig.siteName,
     locale: 'en_US',
     type: 'website',
   },
